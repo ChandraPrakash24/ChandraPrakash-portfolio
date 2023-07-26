@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mt{
+    margin-top: -1em;
+}
+ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    grid-gap: 0 10px;
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+ul.skills-list li:before {
+    content: '▹';
+    color: #0284C7;
+    position: absolute;
+    left: 0;
+    line-height: 20px;
+}
+
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-shake {
+    animation: shake 0.3s linear;
+  }
+
+  .count {
+    transition: 0.3s ease-in-out;
+  }
+  
+  button:hover .count {
+    transform: scale(1.2);
+  }
+
+  .enlarged {
+    transform: scale(1.4);
+  }
+  
+  .enlarged-text {
+    font-size: 0.6rem;
+  }
+
+
+
+
+
+   /* TEXT */
+
+
+
+
+   .text-animation {
+    display: inline-block;
+  }
+  
+  .text-animation:hover {
+    background-image: linear-gradient(to left, #e89b9b, #d3a041, #db8e22, #8df08d, #7777eb, #be75f3, #f396f3);
+    background-size: 200% auto;
+    background-position: right;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: rainbowAnimation 4s linear infinite;
+    animation-fill-mode: forwards; /* Add this line */
+  }
+  
+  @keyframes rainbowAnimation {
+    0% {
+      background-position: 100% 50%; /* Adjusted background position */
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
